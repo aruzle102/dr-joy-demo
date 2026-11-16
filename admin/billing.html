@@ -1,0 +1,128 @@
+<!doctype html>
+<!-- Dr. Joy Dental Clinic — Billing (Tabler invoice-table adaptation; status only, no prices). -->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Billing — Dr. Joy Dental Clinic · Demo</title>
+<link href="../assets/vendor/tabler/css/tabler.min.css" rel="stylesheet"/>
+<link href="../assets/css/demo.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="dj-demo-banner"><strong>Demonstration by Attouche Studio</strong> — sample data · Dr. Joy Dental Clinic clinic system</div>
+<div class="page">
+  <aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1 class="navbar-brand navbar-brand-autodark">
+        <a href="../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <span class="dj-brand-mark">DJ</span>
+          <span><span class="dj-brand-name d-block">Dr. Joy Dental Clinic</span><span class="dj-brand-sub d-block">Clinic system · Demo</span></span>
+        </a>
+      </h1>
+      <div class="collapse navbar-collapse" id="sidebar-menu">
+        <ul class="navbar-nav pt-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html"><span class="nav-link-icon" data-icon="layout-dashboard"></span><span class="nav-link-title">Dashboard</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="appointments.html"><span class="nav-link-icon" data-icon="calendar"></span><span class="nav-link-title">Appointments</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="patients.html"><span class="nav-link-icon" data-icon="users"></span><span class="nav-link-title">Patients</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="treatments.html"><span class="nav-link-icon" data-icon="stethoscope"></span><span class="nav-link-title">Treatments</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="billing.html"><span class="nav-link-icon" data-icon="file-invoice"></span><span class="nav-link-title">Billing</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../branches.html"><span class="nav-link-icon" data-icon="building-hospital"></span><span class="nav-link-title">Clinics</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="settings.html"><span class="nav-link-icon" data-icon="settings"></span><span class="nav-link-title">Settings</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html"><span class="nav-link-icon" data-icon="arrow-right"></span><span class="nav-link-title">View public site</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../sign-in.html"><span class="nav-link-icon" data-icon="logout"></span><span class="nav-link-title">Sign out</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <div class="page-wrapper">
+    <header class="navbar navbar-expand-md d-print-none d-none d-lg-flex">
+      <div class="container-xl">
+        <div class="navbar-nav flex-row order-md-last">
+          <div class="nav-item d-none d-md-flex me-3">
+            <div class="btn-list"><a href="#" class="btn" id="reset-demo">Reset demo data</a></div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+              <span class="avatar avatar-sm" style="background-color:#0e7c7b;color:#fff">DA</span>
+              <span class="d-none d-xl-block ps-2"><span>Demo Admin</span><span class="mt-1 small text-secondary d-block">Attouche Studio demo</span></span>
+            </a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="settings.html">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../sign-in.html">Sign out</a>
+              </div>
+          </div>
+        </div>
+        <div class="me-auto"><span class="text-secondary">Toll free <strong>800 DRJOY (37569)</strong></span></div>
+      </div>
+    </header>
+    <div class="page-header d-print-none">
+      <div class="container-xl">
+        <div class="row g-2 align-items-center">
+          <div class="col">
+            <div class="page-pretitle">Dr. Joy Dental Clinic · Invoices &amp; payment status</div>
+            <h2 class="page-title">Billing</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-body">
+      <div class="container-xl">
+        <div class="row row-cards">
+          <div class="col-sm-4">
+            <div class="card card-sm"><div class="card-body"><div class="row align-items-center">
+              <div class="col-auto"><span class="bg-primary text-white avatar"><span data-icon="file-invoice"></span></span></div>
+              <div class="col"><div class="font-weight-medium" id="inv-total">–</div><div class="text-secondary">Invoices (sample)</div></div>
+            </div></div></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card card-sm"><div class="card-body"><div class="row align-items-center">
+              <div class="col-auto"><span class="bg-green text-white avatar"><span data-icon="circle-check"></span></span></div>
+              <div class="col"><div class="font-weight-medium" id="inv-paid">–</div><div class="text-secondary">Paid</div></div>
+            </div></div></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card card-sm"><div class="card-body"><div class="row align-items-center">
+              <div class="col-auto"><span class="bg-yellow text-white avatar"><span data-icon="clock"></span></span></div>
+              <div class="col"><div class="font-weight-medium" id="inv-pending">–</div><div class="text-secondary">Pending</div></div>
+            </div></div></div>
+          </div>
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header"><h3 class="card-title">Recent invoices</h3></div>
+              <div class="table-responsive">
+                <table class="table table-vcenter card-table">
+                  <thead><tr><th>Invoice</th><th>Patient</th><th>Treatment</th><th>Date</th><th>Status</th><th class="text-end"></th></tr></thead>
+                  <tbody id="invoice-rows"></tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <span class="text-secondary">This demo shows invoice status only — no amounts. In the installed system, amounts are the clinic's own fee schedule, entered by the clinic, never invented by us.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-transparent d-print-none">
+      <div class="container-xl">
+        <div class="row text-center align-items-center flex-row-reverse">
+          <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+            <ul class="list-inline list-inline-dots mb-0">
+              <li class="list-inline-item">Dr. Joy Dental Clinic — demonstration by Attouche Studio · Sample data</li>
+              <li class="list-inline-item">Layout: Tabler 1.7.3 (MIT)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+<script src="../assets/vendor/tabler/js/tabler.min.js"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

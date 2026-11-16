@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- Dr. Joy Dental Clinic — Settings (Tabler settings/form adaptation). -->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Settings — Dr. Joy Dental Clinic · Demo</title>
+<link href="../assets/vendor/tabler/css/tabler.min.css" rel="stylesheet"/>
+<link href="../assets/css/demo.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="dj-demo-banner"><strong>Demonstration by Attouche Studio</strong> — sample data · Dr. Joy Dental Clinic clinic system</div>
+<div class="page">
+  <aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1 class="navbar-brand navbar-brand-autodark">
+        <a href="../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <span class="dj-brand-mark">DJ</span>
+          <span><span class="dj-brand-name d-block">Dr. Joy Dental Clinic</span><span class="dj-brand-sub d-block">Clinic system · Demo</span></span>
+        </a>
+      </h1>
+      <div class="collapse navbar-collapse" id="sidebar-menu">
+        <ul class="navbar-nav pt-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html"><span class="nav-link-icon" data-icon="layout-dashboard"></span><span class="nav-link-title">Dashboard</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="appointments.html"><span class="nav-link-icon" data-icon="calendar"></span><span class="nav-link-title">Appointments</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="patients.html"><span class="nav-link-icon" data-icon="users"></span><span class="nav-link-title">Patients</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="treatments.html"><span class="nav-link-icon" data-icon="stethoscope"></span><span class="nav-link-title">Treatments</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="billing.html"><span class="nav-link-icon" data-icon="file-invoice"></span><span class="nav-link-title">Billing</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../branches.html"><span class="nav-link-icon" data-icon="building-hospital"></span><span class="nav-link-title">Clinics</span></a></li>
+          <li class="nav-item"><a class="nav-link active" href="settings.html"><span class="nav-link-icon" data-icon="settings"></span><span class="nav-link-title">Settings</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html"><span class="nav-link-icon" data-icon="arrow-right"></span><span class="nav-link-title">View public site</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../sign-in.html"><span class="nav-link-icon" data-icon="logout"></span><span class="nav-link-title">Sign out</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <div class="page-wrapper">
+    <header class="navbar navbar-expand-md d-print-none d-none d-lg-flex">
+      <div class="container-xl">
+        <div class="navbar-nav flex-row order-md-last">
+          <div class="nav-item d-none d-md-flex me-3">
+            <div class="btn-list"><a href="#" class="btn" id="reset-demo">Reset demo data</a></div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+              <span class="avatar avatar-sm" style="background-color:#0e7c7b;color:#fff">DA</span>
+              <span class="d-none d-xl-block ps-2"><span>Demo Admin</span><span class="mt-1 small text-secondary d-block">Attouche Studio demo</span></span>
+            </a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="settings.html">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../sign-in.html">Sign out</a>
+              </div>
+          </div>
+        </div>
+        <div class="me-auto"><span class="text-secondary">Toll free <strong>800 DRJOY (37569)</strong></span></div>
+      </div>
+    </header>
+    <div class="page-header d-print-none">
+      <div class="container-xl">
+        <div class="row g-2 align-items-center">
+          <div class="col">
+            <div class="page-pretitle">Dr. Joy Dental Clinic · Clinic profile &amp; preferences</div>
+            <h2 class="page-title">Settings</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-body">
+      <div class="container-xl">
+        <div class="row row-cards">
+          <div class="col-lg-8">
+            <form class="card" id="settings-form">
+              <div class="card-header"><h3 class="card-title">Clinic profile</h3></div>
+              <div class="card-body">
+                <div class="alert alert-info d-none" id="settings-saved" role="alert">Settings saved (demo) — in the installed system these are stored for all 14 clinics.</div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Clinic group name</label>
+                    <input type="text" class="form-control" value="Dr. Joy Dental Clinics"/>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Toll-free booking line</label>
+                    <input type="text" class="form-control" value="800 DRJOY (37569)"/>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Default clinic for new bookings</label>
+                    <select class="form-select"><option>Palm Jumeirah Clinic</option><option>Jumeirah Beach Road Clinic</option><option>Dubai Marina Clinic</option><option>Dubai Hills Mall Clinic</option></select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Appointment slot length</label>
+                    <select class="form-select"><option>30 minutes</option><option selected>45 minutes</option><option>60 minutes</option></select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label">Working hours note shown on the booking page</label>
+                    <input type="text" class="form-control" value="Open daily — call the clinic to confirm hours"/>
+                  </div>
+                </div>
+                <h3 class="card-title mt-2">Notifications</h3>
+                <label class="form-check form-switch mb-2">
+                  <input class="form-check-input" type="checkbox" checked/>
+                  <span class="form-check-label">Remind patients by SMS the day before their appointment</span>
+                </label>
+                <label class="form-check form-switch mb-2">
+                  <input class="form-check-input" type="checkbox" checked/>
+                  <span class="form-check-label">Email the clinic when a patient books online</span>
+                </label>
+                <label class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox"/>
+                  <span class="form-check-label">Weekly summary of bookings per clinic</span>
+                </label>
+              </div>
+              <div class="card-footer d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Save settings</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">What the installed system includes</h3>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-1"><span data-icon="check"></span> Public website + online booking</li>
+                  <li class="mb-1"><span data-icon="check"></span> Appointments per doctor, all 14 clinics</li>
+                  <li class="mb-1"><span data-icon="check"></span> Patient registry with search</li>
+                  <li class="mb-1"><span data-icon="check"></span> Treatments, durations &amp; billing status</li>
+                  <li class="mb-1"><span data-icon="check"></span> Full admin panel (this system)</li>
+                  <li><span data-icon="check"></span> One-time setup — no monthly licence fee</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-transparent d-print-none">
+      <div class="container-xl">
+        <div class="row text-center align-items-center flex-row-reverse">
+          <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+            <ul class="list-inline list-inline-dots mb-0">
+              <li class="list-inline-item">Dr. Joy Dental Clinic — demonstration by Attouche Studio · Sample data</li>
+              <li class="list-inline-item">Layout: Tabler 1.7.3 (MIT)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+<script src="../assets/vendor/tabler/js/tabler.min.js"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/app.js"></script>
+<script>
+document.getElementById('settings-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('settings-saved').classList.remove('d-none');
+});
+</script>
+</body>
+</html>

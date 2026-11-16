@@ -1,0 +1,111 @@
+/* Dr. Joy rebuild — re-skin on Tabler 1.7.3 (MIT).
+   Palette is Dr. Joy content data (navy #0A2540 / teal #0E7C7B / gold #C2A14D,
+   from the v1 brief); every layout/spacing/component rule is Tabler's own. */
+:root {
+  --tblr-primary: #0e7c7b;
+  --tblr-primary-rgb: 14, 124, 123;
+  --tblr-link-color: #0e7c7b;
+  --tblr-link-hover-color: #0a5e5d;
+  --dj-navy: #0a2540;
+  --dj-teal: #0e7c7b;
+  --dj-gold: #c2a14d;
+}
+
+/* Navy sidebar (Tabler's vertical navbar, dark theme) */
+.navbar-vertical[data-bs-theme="dark"] {
+  background-color: var(--dj-navy);
+}
+.navbar-vertical[data-bs-theme="dark"] .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+.navbar-vertical[data-bs-theme="dark"] .nav-link:hover {
+  color: #fff;
+}
+
+/* Brand mark: navy rounded square, gold initials — no invented logo art */
+.dj-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  background: var(--dj-gold);
+  color: var(--dj-navy);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+.dj-brand-name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.1;
+}
+.dj-brand-sub {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.75rem;
+  line-height: 1.1;
+}
+/* Brand on the light public navbar */
+.dj-brand-on-light .dj-brand-name { color: var(--dj-navy); }
+.dj-brand-on-light .dj-brand-sub { color: var(--tblr-secondary); }
+
+/* Gold accent utilities */
+.text-gold { color: var(--dj-gold) !important; }
+.bg-gold { background-color: var(--dj-gold) !important; }
+.border-gold { border-color: var(--dj-gold) !important; }
+.btn-gold {
+  --bs-btn-bg: var(--dj-gold);
+  --bs-btn-border-color: var(--dj-gold);
+  --bs-btn-hover-bg: #a9883c;
+  --bs-btn-hover-border-color: #a9883c;
+  --bs-btn-color: #0a2540;
+  --bs-btn-hover-color: #0a2540;
+}
+
+/* Demo banner — present on every page, as in v1 */
+.dj-demo-banner {
+  background: var(--dj-navy);
+  color: #fff;
+  font-size: 0.8125rem;
+  padding: 0.45rem 0;
+  text-align: center;
+}
+.dj-demo-banner strong { color: var(--dj-gold); }
+
+/* Public hero (Tabler card + navbar components only) */
+.dj-hero {
+  background: linear-gradient(135deg, #0a2540 0%, #0e3a3a 60%, #0e7c7b 100%);
+  color: #fff;
+  border-radius: var(--tblr-border-radius-lg);
+}
+.dj-hero .lead { color: rgba(255, 255, 255, 0.85); }
+.dj-stat-num {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--dj-navy);
+  line-height: 1;
+}
+.dj-stat-label {
+  font-size: 0.8125rem;
+  color: var(--tblr-secondary);
+}
+
+/* Icons injected by icons.js keep Tabler's .icon sizing */
+.nav-link-icon svg,
+.btn svg,
+.icon-inline svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: text-bottom;
+}
+.dj-icon-lg svg { width: 2rem; height: 2rem; }
+
+/* Print: hide demo banner + sidebar chrome on invoices */
+@media print {
+  .dj-demo-banner, .navbar-vertical, .navbar { display: none !important; }
+  .page-wrapper { margin: 0 !important; }
+}

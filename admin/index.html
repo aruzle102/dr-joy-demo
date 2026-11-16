@@ -1,0 +1,166 @@
+<!doctype html>
+<!-- Dr. Joy Dental Clinic — clinic system demo (rebuild v2).
+     Layout: Tabler 1.7.3 (MIT) — sidebar + topbar shell, stat cards, tables.
+     Content: Dr. Joy facts from drjoydentalclinic.com; all records are sample data. -->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Dashboard — Dr. Joy Dental Clinic · Demo</title>
+<link href="../assets/vendor/tabler/css/tabler.min.css" rel="stylesheet"/>
+<link href="../assets/css/demo.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="dj-demo-banner"><strong>Demonstration by Attouche Studio</strong> — sample data · Dr. Joy Dental Clinic clinic system</div>
+<div class="page">
+  <aside class="navbar navbar-vertical navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar-menu" aria-controls="sidebar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1 class="navbar-brand navbar-brand-autodark">
+        <a href="../index.html" class="d-flex align-items-center gap-2 text-decoration-none">
+          <span class="dj-brand-mark">DJ</span>
+          <span><span class="dj-brand-name d-block">Dr. Joy Dental Clinic</span><span class="dj-brand-sub d-block">Clinic system · Demo</span></span>
+        </a>
+      </h1>
+      <div class="collapse navbar-collapse" id="sidebar-menu">
+        <ul class="navbar-nav pt-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html"><span class="nav-link-icon" data-icon="layout-dashboard"></span><span class="nav-link-title">Dashboard</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="appointments.html"><span class="nav-link-icon" data-icon="calendar"></span><span class="nav-link-title">Appointments</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="patients.html"><span class="nav-link-icon" data-icon="users"></span><span class="nav-link-title">Patients</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="treatments.html"><span class="nav-link-icon" data-icon="stethoscope"></span><span class="nav-link-title">Treatments</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="billing.html"><span class="nav-link-icon" data-icon="file-invoice"></span><span class="nav-link-title">Billing</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../branches.html"><span class="nav-link-icon" data-icon="building-hospital"></span><span class="nav-link-title">Clinics</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="settings.html"><span class="nav-link-icon" data-icon="settings"></span><span class="nav-link-title">Settings</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html"><span class="nav-link-icon" data-icon="arrow-right"></span><span class="nav-link-title">View public site</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="../sign-in.html"><span class="nav-link-icon" data-icon="logout"></span><span class="nav-link-title">Sign out</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <div class="page-wrapper">
+    <header class="navbar navbar-expand-md d-print-none d-none d-lg-flex">
+      <div class="container-xl">
+        <div class="navbar-nav flex-row order-md-last">
+          <div class="nav-item d-none d-md-flex me-3">
+            <div class="btn-list">
+              <a href="#" class="btn" id="reset-demo">Reset demo data</a>
+              <a href="appointments.html" class="btn btn-primary"><span data-icon="calendar-plus"></span> New appointment</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="Open user menu">
+              <span class="avatar avatar-sm" style="background-color:#0e7c7b;color:#fff">DA</span>
+              <span class="d-none d-xl-block ps-2"><span>Demo Admin</span><span class="mt-1 small text-secondary d-block">Attouche Studio demo</span></span>
+            </a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="settings.html">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../sign-in.html">Sign out</a>
+              </div>
+          </div>
+        </div>
+        <div class="me-auto">
+          <span class="text-secondary">Toll free <strong>800 DRJOY (37569)</strong></span>
+        </div>
+      </div>
+    </header>
+    <div class="page-header d-print-none">
+      <div class="container-xl">
+        <div class="row g-2 align-items-center">
+          <div class="col">
+            <div class="page-pretitle">Dr. Joy Dental Clinic · Dubai</div>
+            <h2 class="page-title">Dashboard</h2>
+          </div>
+          <div class="col-auto ms-auto d-print-none d-lg-none">
+            <a href="appointments.html" class="btn btn-primary">New appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-body">
+      <div class="container-xl">
+        <div class="row row-cards">
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-sm"><div class="card-body"><div class="row align-items-center">
+              <div class="col-auto"><span class="bg-primary text-white avatar"><span data-icon="calendar"></span></span></div>
+              <div class="col"><div class="font-weight-medium" id="stat-today">–</div><div class="text-secondary">Appointments today</div></div>
+            </div></div></div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-sm"><div class="card-body"><div class="row align-items-center">
+              <div class="col-auto"><span class="bg-teal text-white avatar"><span data-icon="users"></span></span></div>
+              <div class="col"><div class="font-weight-medium" id="stat-patients">–</div><div class="text-secondary">Patients (sample)</div></div>
+            </div></div></div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-sm"><div class="card-body"><div class="row align-items-center">
+              <div class="col-auto"><span class="bg-azure text-white avatar"><span data-icon="stethoscope"></span></span></div>
+              <div class="col"><div class="font-weight-medium" id="stat-treatments">–</div><div class="text-secondary">Treatments offered</div></div>
+            </div></div></div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="card card-sm"><div class="card-body"><div class="row align-items-center">
+              <div class="col-auto"><span class="bg-yellow text-white avatar"><span data-icon="building-hospital"></span></span></div>
+              <div class="col"><div class="font-weight-medium" id="stat-branches">–</div><div class="text-secondary">Clinics across Dubai</div></div>
+            </div></div></div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-header"><h3 class="card-title">Today's appointments</h3></div>
+              <div class="table-responsive">
+                <table class="table table-vcenter card-table">
+                  <thead><tr><th>Time</th><th>Patient</th><th>Treatment</th><th>Doctor</th><th>Clinic</th><th>Status</th></tr></thead>
+                  <tbody id="today-rows"></tbody>
+                </table>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <a href="appointments.html" class="btn btn-primary btn-sm">View all appointments</a>
+                <span class="text-secondary ms-3">Sample data — book from the <a href="../book.html">public booking page</a> and it appears here.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header"><h3 class="card-title">Recent patients</h3></div>
+              <div class="list-group list-group-flush" id="recent-patients"></div>
+              <div class="card-footer"><a href="patients.html">View patient registry</a></div>
+            </div>
+            <div class="card mt-3">
+              <div class="card-body">
+                <h3 class="card-title">About Dr. Joy Dental Clinics</h3>
+                <p class="text-secondary mb-2">Established in 2004 — the largest dental clinic group in the United Arab Emirates, recognised with the Superbrand award.</p>
+                <ul class="list-unstyled mb-0">
+                  <li><span class="text-gold">★</span> 21 years of dedicated excellence</li>
+                  <li><span class="text-gold">★</span> 100+ renowned dentists, all specialities under one roof</li>
+                  <li><span class="text-gold">★</span> 700K+ happy patients</li>
+                  <li><span class="text-gold">★</span> State-of-the-art in-house dental lab</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-transparent d-print-none">
+      <div class="container-xl">
+        <div class="row text-center align-items-center flex-row-reverse">
+          <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+            <ul class="list-inline list-inline-dots mb-0">
+              <li class="list-inline-item">Dr. Joy Dental Clinic — demonstration by Attouche Studio · Sample data</li>
+              <li class="list-inline-item">Layout: Tabler 1.7.3 (MIT)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+<script src="../assets/vendor/tabler/js/tabler.min.js"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>

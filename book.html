@@ -1,0 +1,143 @@
+<!doctype html>
+<!-- Dr. Joy Dental Clinic — Book an appointment (public booking form; writes to the demo store). -->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Book an appointment — Dr. Joy Dental Clinic · Demo</title>
+<link href="assets/vendor/tabler/css/tabler.min.css" rel="stylesheet"/>
+<link href="assets/css/demo.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="dj-demo-banner"><strong>Demonstration by Attouche Studio</strong> — sample data · Dr. Joy Dental Clinic clinic system</div>
+<div class="page">
+  <header class="navbar navbar-expand-md d-print-none">
+    <div class="container-xl">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+        <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none dj-brand-on-light">
+          <span class="dj-brand-mark">DJ</span>
+          <span><span class="dj-brand-name d-block">Dr. Joy Dental Clinic</span><span class="dj-brand-sub d-block">Dubai · Since 2004</span></span>
+        </a>
+      </h1>
+      <div class="navbar-nav flex-row order-md-last">
+        <div class="nav-item d-none d-md-flex me-3">
+          <div class="btn-list">
+            <a href="tel:80037569" class="btn"><span data-icon="phone"></span> 800 DRJOY (37569)</a>
+            <a href="book.html" class="btn btn-primary">Book an appointment</a>
+          </div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html"><span class="nav-link-title">Home</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html"><span class="nav-link-title">Services</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="branches.html"><span class="nav-link-title">Our clinics</span></a></li>
+            <li class="nav-item active"><a class="nav-link" href="book.html"><span class="nav-link-title">Book now</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="sign-in.html"><span class="nav-link-title">Staff sign-in</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="page-wrapper">
+    <div class="page-header d-print-none">
+      <div class="container-xl">
+        <div class="row g-2 align-items-center">
+          <div class="col">
+            <div class="page-pretitle">Dr. Joy Dental Clinic · Dubai</div>
+            <h2 class="page-title">Book an appointment</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-body">
+      <div class="container-xl">
+        <div class="row row-cards justify-content-center">
+          <div class="col-lg-8">
+            <div class="alert alert-success d-none" id="book-success" role="alert">
+              <h4 class="alert-title">Booking received</h4>
+              <div class="text-secondary" id="book-success-text"></div>
+              <div class="mt-2"><a href="admin/appointments.html" class="btn btn-sm btn-primary">See it in the appointments list</a></div>
+            </div>
+            <form class="card" id="book-form">
+              <div class="card-header"><h3 class="card-title">Your appointment</h3></div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Your name</label>
+                    <input type="text" class="form-control" id="b-name" placeholder="Full name" required/>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="b-phone" placeholder="+971 …" required/>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Clinic</label>
+                    <select class="form-select" id="b-branch"></select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Treatment</label>
+                    <select class="form-select" id="b-treatment"></select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Doctor (speciality)</label>
+                    <select class="form-select" id="b-doctor">
+                      <option>General Dentist</option>
+                      <option>Orthodontist (Invisalign)</option>
+                      <option>Prosthodontist</option>
+                      <option>Cosmetic Dentist</option>
+                      <option>Pediatric Dentist</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label class="form-label">Date</label>
+                    <input type="date" class="form-control" id="b-date" required/>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label class="form-label">Time</label>
+                    <select class="form-select" id="b-time">
+                      <option>09:00</option><option>09:30</option><option>10:00</option><option>10:30</option>
+                      <option>11:00</option><option>11:30</option><option>13:00</option><option>13:30</option>
+                      <option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option>
+                      <option>16:00</option><option>16:30</option><option>17:00</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label">Anything we should know? <span class="form-label-description">Optional</span></label>
+                    <textarea class="form-control" rows="2" placeholder="e.g. first visit, sensitive tooth…"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <span class="text-secondary">Prefer to call? Toll free <strong>800 DRJOY (37569)</strong>.</span>
+                <button type="submit" class="btn btn-primary ms-auto">Confirm booking</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-transparent d-print-none">
+      <div class="container-xl">
+        <div class="row text-center align-items-center flex-row-reverse">
+          <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+            <ul class="list-inline list-inline-dots mb-0">
+              <li class="list-inline-item">Dr. Joy Dental Clinic — demonstration by Attouche Studio · Sample data</li>
+              <li class="list-inline-item">Layout: Tabler 1.7.3 (MIT)</li>
+              <li class="list-inline-item"><a href="admin/index.html">Clinic system (admin demo)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+<script src="assets/vendor/tabler/js/tabler.min.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
